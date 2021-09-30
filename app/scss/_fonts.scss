@@ -1,0 +1,63 @@
+@font-face{
+  font-family: 'Product Sans Black', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  src: local('Product Sans Black'),
+    url('../fonts/ProductSans-Black.woff2') format('woff2'),
+    url('../fonts/ProductSans-Black.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'Product Sans Medium',sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: local('Product Sans Medium'),
+    url('../fonts/ProductSans-Medium.woff2') format('woff2'),
+    url('../fonts/ProductSans-Medium.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'Product Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Product Sans'),
+    url('../fonts/ProductSans-Bold.woff2') format('woff2'),
+    url('../fonts/ProductSans-Bold.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  src: local('SF UI Display'),
+    url('../fonts/SF-UI-Display-Regular-1.woff2') format('woff2'),
+    url('../fonts/SF-UI-Display-Regular-1.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'SF UI Display Medium', sans-serif;
+  font-weight: 500;
+  font-style:normal;
+  src: local('SF UI Display Medium'),
+    url('../fonts/SF-UI-Display-Medium.woff2') format('woff2'),
+    url('../fonts/SF-UI-Display-Medium.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Gilroy-Bold'),
+    url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Bold.woff');
+  font-display:swap;
+}
+@font-face{
+  font-family: 'Gilroy-Semi-Bold', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: local('Gilroy-Semi-Bold'),
+    url('../fonts/Gilroy-Semi-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semi-Bold.woff');
+  font-display:swap;
+}
