@@ -4,6 +4,7 @@ body{
  height: 100%;
 }
 body{
+  @extend %sfUiDisplay-400;
   font-size: 14px;
   line-height: 26.34px;
   color: $default;
@@ -12,7 +13,7 @@ body{
 }
 
 .main{
-  flex-grow: 1;
+  flex: 1 0 auto;
 }
 
 .container{
@@ -21,5 +22,21 @@ body{
   padding: 0 15px;
 }
 .breadcrumbs{
-  
+  @extend %sfUiDisplay-400;
+  font-size: 16px;
+  color:#fff ;
+  &__list{
+    display: flex;
+  }
+  &__item:first-child{
+    color: $active;
+  }
+  &__item + .breadcrumbs__item::before{
+    content: '/';
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+  &__link{
+    color: inherit;
+  }
 }

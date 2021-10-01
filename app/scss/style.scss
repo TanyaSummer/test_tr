@@ -5,6 +5,7 @@
 
 .header-top{
   margin-bottom: 20px;
+  border-bottom: 1px solid #DEDEDE;
   &__inner{
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,6 @@
       color: #008A93;
     }
   }
-  
 }
 .user-nav{
   display: flex;
@@ -93,33 +93,11 @@
   }
 }
 .header-buttom{
-  display: flex;
+  margin-bottom: 20px;
+  &__inner{
+    display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  .logo{
-    display: flex;
-    &__img{
-      margin-right: 19px;
-    }
-    &__box{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    &__text-title{
-      @extend %gilroyBold-700;
-      font-size: 30px;
-      line-height: 39px;
-      color: #000;
-      text-transform: uppercase;
-    }
-    &__text-subtitle{
-      font-size: 15px;
-      line-height: 22.05px;
-      @extend %sfUiDisplay-400;
-      color:#656565;
-    }
   }
   &__text{
     @extend %gilroySemiBold-600;
@@ -163,12 +141,13 @@
     display: flex;
     align-items: center;
     &__btn{
+      display: inherit;
       background-color: transparent;
       border: 1px solid #D3D3D3;
       border-radius: 50%;
       width: 55px;
       height: 55px;
-      padding: 18px;
+      padding: 0 17px;
       margin-right: 15px;
       cursor: pointer;
     }
@@ -183,14 +162,31 @@
     display: flex;
     align-items: center;
     &__btn{
+      display: inherit;
       background-color: transparent;
       border: 1px solid #D3D3D3;
       border-radius: 50%;
       width: 55px;
       height: 55px;
-      padding: 18px;
+      padding: 0 14px;
       margin-right: 15px;
       cursor: pointer;
+      position: relative;
+      &::after{
+        content:'5';
+        background-color: $active;
+        border-radius: 50%;
+        width: 19px;
+        height: 19px;
+        color: #fff;
+        @extend %sfUiDisplay-400;
+        font-size: 12px;
+        line-height: 19px;
+        text-align: center;
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
     }
     &__box{
       display: flex;
@@ -210,6 +206,223 @@
     }
   }
 }
-.top{
-  padding: 40px 0 51px;
+.logo{
+  display: flex;
+  &__img{
+    margin-right: 19px;
+  }
+  &__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text-title{
+    @extend %gilroyBold-700;
+    font-size: 30px;
+    line-height: 39px;
+    color: #000;
+    text-transform: uppercase;
+  }
+  &__text-subtitle{
+    font-size: 15px;
+    line-height: 22.05px;
+    @extend %sfUiDisplay-400;
+    color:#656565;
+  }
+  &__text-title__footer{
+    color: #fff;
+  }
+  &__text-subtitle__footer{
+    color: #fff;
+  }
 }
+.top{
+  margin-bottom: 55px;
+  padding: 40px 0 51px;
+  &__title{
+    @extend %productSans-700;
+    font-size: 44px;
+    line-height: 57.2px;
+    color: #fff;
+  }
+}
+.sale{
+  background-color: #F4F4F4;
+  padding-bottom: 103px;
+  .sale-top{
+    
+    border-bottom: 1px solid #D1D1D1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend %productSans-700;
+    text-transform: uppercase;
+    color: #272C2F;
+    &__title{
+      font-size: 34px;
+      line-height: 44.2px;
+      border-bottom: 4px solid #06AAB5;
+      padding-bottom: 25px;
+    }
+    &__link{
+      font-size: 13px;
+      margin-right: 45px;
+      position: relative;
+      color: #272C2F;
+      
+      &::after{
+        content: '';
+        background-image: url('../images/icon/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $active;
+        position: absolute;
+        top: -1px;
+        right: -47px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50px;
+      }
+    }
+  }
+  .sale-content{
+    &__items{
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item-box{
+      background-color: #fff;
+      padding: 30px 27px 0 27px;
+      width: 300px;
+      display: grid;
+      position: relative;
+      &::before{
+        content: "АКЦИЯ";
+        background-color: $active;
+        padding: 8px 19px;
+        color: #fff;
+        @extend %productSans-700;
+        position: absolute;
+        top: 30px;
+        left: 27px;
+      }
+    }
+    &__image{
+      width: 243px;
+      height: 180px;
+      margin-bottom: 18px;
+    }
+    &__img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &__text{
+      @extend%sfUiDisplay-400;
+      font-size: 18px;
+      line-height: 26.34px;
+      color: #363636;
+      margin-bottom: 13px;
+      width: 243px;
+      height: 78px;
+      overflow: hidden;
+    }
+    &__price{
+      @extend %sfUiDisplay-500;
+      font-size: 22px;
+      line-height: 29.22px;
+      color: #000;
+      margin-bottom: 18px;
+    }
+    &__link{
+      text-transform: uppercase;
+      color:#404040;
+      font-size: 17.27px;
+      @extend %sfUiDisplay-400;
+      display: inline-block;
+      width: 100%;
+      border-top: 1px solid #D8D8D8;
+      width: 300px;
+      padding: 17px 27px 20px 17px;
+      background-color: #fff;
+    }
+  }
+}
+.footer{
+  background-color:#2D3E4F;
+  .footer-top{
+    padding: 40px 0 38px;
+    border-bottom: 1px solid #FFFFFF33;
+    
+    &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .menu-footer{
+    &__list{
+      display: flex;
+      align-items: center;
+    }
+    &__list-item{
+      color: #fff;
+      @extend %productSans-500;
+      line-height: 32.24px;
+      text-transform: uppercase;
+      margin-right: 23px;
+    }
+  }
+  .user-footer{
+    &__link{
+      padding: 9px 9px;
+      background-color: $navigation;
+      width: 35px;
+      height: 35px;
+      display: inline-block;
+      border-radius: 50px;
+      svg{
+        path{
+          fill: #fff;
+        }
+      }
+    }
+    &__link-vk{
+      padding: 7px 8px;
+    }
+    &__social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      width: 130px;
+    }
+  }
+  .phone__link{
+    @extend %sfUiDisplay-500;
+    color: #fff;
+    font-size: 18px;
+    line-height: 26.46px;
+  }
+  .footer-bootom{
+    padding: 19px  0 23px;
+    color:#929292;
+    &__inner{
+      position: relative;
+    }
+    &__copywrite{
+      margin-right: 120px;
+    }
+    &__text{
+      position: absolute;
+      right: 0;
+      span{
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
