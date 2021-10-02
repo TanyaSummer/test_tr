@@ -3,6 +3,9 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  background-color: #fff;
+}
 .header-top{
   margin-bottom: 20px;
   border-bottom: 1px solid #DEDEDE;
@@ -25,10 +28,13 @@
   }
   &__list-item{
     margin-right: 15px;
-    &:first-child{
+    &:first-child a{
     color: #008A93;
     @extend %productSans-700;
     }
+  }
+  &__list-link{
+    color: #151515;
     &:hover{
       color: #008A93;
     }
@@ -366,7 +372,7 @@
       display: flex;
       align-items: center;
     }
-    &__list-item{
+    &__list-link{
       color: #fff;
       @extend %productSans-500;
       line-height: 32.24px;
@@ -414,10 +420,14 @@
     &__copywrite{
       margin-right: 120px;
     }
+    &__privacy-policy{
+      color: #929292;
+      ;
+    }
     &__text{
       position: absolute;
       right: 0;
-      span{
+      a{
         color: #fff;
       }
     }
